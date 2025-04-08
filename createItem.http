@@ -1,0 +1,6 @@
+POST http://localhost:3000/api/items
+
+{
+  "name": "Cama de casal",
+  "description": "Cama queen size com colchão"
+}
