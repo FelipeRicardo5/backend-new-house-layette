@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const dotenv = require('dotenv').config();
 
 const itemRoutes = require('./src/routes/itemRoutes')
 const listRoutes = require('./src/routes/listRoutes')
@@ -14,7 +15,7 @@ app.use(express.json());
 app.use(cors());
 
 // Conectando ao MongoDB
-mongoose.connect('process.env.MONGOB_URI', {
+mongoose.connect("mongodb+srv://wilnara:macaco@odonto-legal-api.rrjmhlj.mongodb.net/?retryWrites=true&w=majority&appName=Odonto-legal-API", {
 }).then(() => {
     console.log('Conectado ao MongoDB!');
 }).catch(err => {
