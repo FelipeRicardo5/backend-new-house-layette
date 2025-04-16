@@ -15,7 +15,8 @@ app.use(express.json());
 app.use(cors());
 
 // Conectando ao MongoDB
-mongoose.connect("mongodb+srv://wilnara:macaco@odonto-legal-api.rrjmhlj.mongodb.net/?retryWrites=true&w=majority&appName=Odonto-legal-API", {
+
+mongoose.connect(process.env.MONGOB_URI, {
 }).then(() => {
     console.log('Conectado ao MongoDB!');
 }).catch(err => {
